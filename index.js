@@ -5,6 +5,7 @@ const User = require('./models/User');
 const Post = require('./models/Post');
 const bcrypt = require('bcrypt');
 const app = express();
+const dotenv = require("dotenv");
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
 const multer = require('multer');
@@ -12,6 +13,9 @@ const uploadMiddleware = multer({ dest: 'uploads/' });
 const fs = require('fs');
 
 const salt = bcrypt.genSaltSync(10);
+
+dotenv.config();
+
 const secret = 'asdfe45we45w345wegw345werjktjwertkj';
 
 const PORT = process.env.PORT || 4000
