@@ -20,7 +20,7 @@ const secret = 'asdfe45we45w345wegw345werjktjwertkj';
 
 const PORT = process.env.PORT || 4000
 
-app.use(cors({credentials:true,origin: process.env.FRONT_URL}));
+app.use(cors({credentials:true,origin: 'https://blog-backend-tvt7.onrender.com'}));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
